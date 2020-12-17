@@ -1,0 +1,27 @@
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_message.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>登入</h1>
+
+<%= form_with(model: @user, url: sign_in_users_path, method:'post', local: true) do |form| %>
+
+<div>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+</div>
+
+<div>
+  <%= form.label :password %>
+  <%= form.text_field :password %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+
+<% end %>

@@ -1,0 +1,2 @@
+class Beconmedriver < ApplicationRecord
+end

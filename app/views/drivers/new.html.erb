@@ -1,0 +1,21 @@
+<h1>成為外送員</h1>
+
+<%= form_for(@driver) do |form| %>
+
+  <div>
+    <%= form.label :license %>
+    <%= form.file_field :license %>
+  </div>
+  <div>
+    <%= form.label :car %>
+    <%= form.text_field :car %>
+  </div>
+  <div>
+    <%= form.label :account %>
+    <%= form.text_field :account %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
